@@ -1,0 +1,41 @@
+
+@media all {
+    .page-break {
+        display: none;
+    }
+}
+
+@media print {
+
+    header,
+    main,
+    footer {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    a[href]::after {
+        content: none;
+    }
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    .noPrint
+    {
+        display: none !important;
+        width: 0px !important;
+    }
+    .printmedia {
+        width:100% !important;
+    }
+
+    @page {
+        size: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 1mm;
+        margin-bottom: 1mm;
+        font-size:8px;
+    }
+}
